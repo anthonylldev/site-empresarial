@@ -1,5 +1,6 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "header";
+@import "footer";
 
 @include media-breakpoint-down(sm) {}
 @include media-breakpoint-down(md) {}
@@ -15,4 +16,8 @@
 
 header {
     @extend %header-template
+}
+
+footer {
+    @extend %footer-template
 }
