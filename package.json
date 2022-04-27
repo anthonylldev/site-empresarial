@@ -1,0 +1,22 @@
+{
+  "name": "site-empresarial",
+  "version": "1.0.0",
+  "description": "Practica site-empresarial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonylldev/site-empresarial.git"
+  },
+  "author": "Anthony Fabian Leon Lucero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonylldev/site-empresarial/issues"
+  },
+  "homepage": "https://github.com/anthonylldev/site-empresarial#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
