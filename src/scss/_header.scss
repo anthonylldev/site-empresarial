@@ -1,0 +1,95 @@
+%header-template {
+    .row:first-child {
+        background-color: rgba(211, 211, 211, 0.5);
+        padding: 10px 50px 10px 10px;
+        border-bottom: solid 1px lightgray;
+
+        .col {
+            margin: 0;
+            padding: 0;
+
+            .header-phone {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .fa-phone {
+                    margin-right: 10px;
+                }
+            }
+
+            .searcher {
+                float: right;
+
+                .txt-search {
+                    height: 35px;
+                    width: 250px;
+                    padding-left: 5px;
+                    border: 0;
+
+                    &::placeholder {
+                        color: rgba(255, 0, 0, 0.4);
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .btn-search {
+                    background-color: gray;
+                    color: white;
+                    height: 35px;
+                    width: 35px;
+                    border: 0;
+                    float: right;
+
+                    &:hover {
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    .row:last-child {
+        background-color: white;
+        padding: 10px 50px 10px 10px;
+        border-bottom: solid 1px lightgray;
+
+        .col {
+            margin: 0;
+            padding: 0;
+
+            .nav-menu {
+                height: 100%;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .item {
+                    font-weight: bold;
+                    font-size: 0.8em;
+                    text-transform: uppercase;
+                    padding-left: 40px;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+
+                .active {
+                    a {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
