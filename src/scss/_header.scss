@@ -1,92 +1,106 @@
+@use "colors";
+
 %header-template {
-    .row:first-child {
-        background-color: rgba(211, 211, 211, 0.5);
-        padding: 10px 50px 10px 10px;
+
+    .header-info {
+        background-color: colors.$primary-header;
         border-bottom: solid 1px lightgray;
+        padding: 20px 0;
 
-        .col {
-            margin: 0;
-            padding: 0;
+        .row {
+            .col {
+                margin: 0;
+                padding: 0;
 
-            .header-phone {
-                height: 100%;
-                display: flex;
-                align-items: center;
+                .header-phone {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    color: colors.$on-header;
 
-                .fa-phone {
-                    margin-right: 10px;
-                }
-            }
-
-            .searcher {
-                float: right;
-
-                .txt-search {
-                    height: 35px;
-                    width: 250px;
-                    padding-left: 5px;
-                    border: 0;
-
-                    &::placeholder {
-                        color: rgba(255, 0, 0, 0.4);
-                    }
-
-                    &:focus {
-                        outline: none;
+                    .fa-phone {
+                        margin-right: 10px;
+                        color: colors.$on-header;
                     }
                 }
 
-                .btn-search {
-                    background-color: gray;
-                    color: white;
-                    height: 35px;
-                    width: 35px;
-                    border: 0;
-                    float: right;
+                .searcher {
+                    display: flex;
+                    justify-content: end;
 
-                    &:hover {
-                        background-color: red;
+                    .txt-search {
+                        height: 35px;
+                        width: 250px;
+                        font-size: 0.8em;
+                        padding-left: 5px;
+                        border: 0;
+
+                        &::placeholder {
+                            color: rgba(255, 0, 0, 0.4);
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &::-webkit-search-cancel-button{
+                            -webkit-appearance: none;
+                        }
+                    }
+
+                    .btn-search {
+                        background-color: gray;
+                        color: white;
+                        height: 35px;
+                        width: 35px;
+                        border: 0;
+
+                        &:hover {
+                            background-color: colors.$hover;
+                        }
                     }
                 }
             }
         }
     }
 
-    .row:last-child {
-        background-color: white;
-        padding: 10px 50px 10px 10px;
+    .header-nav {
+        background-color: colors.$primary-variant-header;
         border-bottom: solid 1px lightgray;
+        padding: 10px 0;
 
-        .col {
-            margin: 0;
-            padding: 0;
+        .row {
+            .col {
+                margin: 0;
+                padding: 0;
 
-            .nav-menu {
-                height: 100%;
-                list-style: none;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
+                .nav-menu {
+                    height: 100%;
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
 
-                .item {
-                    font-weight: bold;
-                    font-size: 0.8em;
-                    text-transform: uppercase;
-                    padding-left: 40px;
+                    .item {
+                        font-weight: bold;
+                        font-size: 0.8em;
+                        text-transform: uppercase;
+                        padding-left: 40px;
 
-                    a {
-                        text-decoration: none;
-                        color: black;
+                        a {
+                            text-decoration: none;
+                            color: black;
 
-                        &:hover {
-                            color: red;
+                            &:hover {
+                                color: colors.$hover;
+                            }
                         }
                     }
-                }
 
-                .active {
-                    a {
-                        color: red;
+                    .active {
+                        a {
+                            color: colors.$secondary-header;
+                        }
                     }
                 }
             }

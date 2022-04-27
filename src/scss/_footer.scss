@@ -2,23 +2,42 @@
 
 %footer-template {
 
-    .row:first-child {
+    .footer-company-information {
         background-color: colors.$primary-footer;
         border-bottom: solid 1px lightgray;
-        padding: 50px;
+        padding: 50px 0;
 
-        .col {
-            margin: 0 10px;
+        .row {
+            .col {
+                margin: 0 10px;
 
-            h4 {
-                font-size: 1.1em;
-                font-weight: bold;
+                h4 {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+
+                .footer-list {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: colors.$on-footer;
+
+                        &:hover {
+                            color: colors.$hover;
+                        }
+                    }
+                }
             }
 
-            .footer-list {
-                list-style: none;
-                margin: 0;
-                padding: 0;
+            .with-us {
+                p {
+                    &:last-of-type {
+                        color: colors.$on-footer;
+                    }
+                }
 
                 a {
                     text-decoration: none;
@@ -29,79 +48,70 @@
                     }
                 }
             }
-        }
 
-        .with-us {
-
-            p {
-                &:last-of-type {
+            .newsletter {
+                p {
                     color: colors.$on-footer;
                 }
-            }
 
-            a {
-                text-decoration: none;
-                color: colors.$on-footer;
+                .newsletter-form {
+                    display: flex;
+                    justify-content: end;
 
-                &:hover {
-                    color: colors.$hover;
-                }
-            }
-        }
+                    .email-newsletter {
+                        border: 0;
+                        width: 100%;
+                        height: 35px;
+                        padding-left: 5px;
+                        font-size: 0.8em;
 
-        .newsletter {
-            p {
-                color: colors.$on-footer;
-            }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
 
-            .newsletter-form {
-                display: flex;
-                justify-content: end;
-
-                .email-newsletter {
-                    border: 0;
-                    width: 100%;
-                    height: 35px;
-                    padding-left: 5px;
-
-                    &:focus {
-                        outline: none;
+                    .btn-newsletter {
+                        border: 0;
+                        height: 35px;
+                        padding: 5px;
+                        background-color: colors.$secondary-footer;
+                        color: white;
+                        font-size: 0.8em;
+                        font-weight: bold;
                     }
                 }
-
-                .btn-newsletter {
-                    border: 0;
-                    height: 35px;
-                    padding: 5px;
-                    background-color: colors.$secondary-footer;
-                    color: white;
-                    font-weight: bold;
-                }
             }
         }
-
-
     }
 
-    .row:last-child {
+    .footer-social-media-badges {
         background-color: colors.$primary-variant-footer;
-        padding: 10px 50px;
+        padding: 10px 0;
 
-        .badge {
-            display: flex;
-            justify-content: end;
-            align-items: center;
+        .row {
+            .copyright {
+                p {
+                    vertical-align: center;
+                    margin: 10px 0;
+                }
+            }
 
-            a {
-                text-decoration: none;
-                margin: 10px;
+            .badge {
+                display: flex;
+                justify-content: end;
+                align-items: center;
 
-                .fa-brands {
-                    color: colors.$on-footer;
-                    font-size: 16px;
+                a {
+                    text-decoration: none;
+                    margin: 10px;
 
-                    &:hover {
-                        color: colors.$hover;
+                    .fa-brands {
+                        color: colors.$on-footer;
+                        font-size: 16px;
+
+                        &:hover {
+                            color: colors.$hover;
+                        }
                     }
                 }
             }
