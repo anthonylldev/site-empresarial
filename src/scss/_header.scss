@@ -66,73 +66,74 @@
                     }
                 }
             }
+        }
+    }
+}
 
-            .col-xs-12 {
+.header-nav {
+    background-color: colors.$primary-variant-header;
+    border-bottom: solid 1px lightgray;
+    padding: 10px 0;
 
-                .header-phone {
-                    justify-content: center;
-                    margin-bottom: 10px;
-                }
+    .row {
+        .logo-container {
+            margin: 0;
+            padding: 0;
+        }
 
-                .searcher {
-                    justify-content: center;
+        .nav-container {
+            margin: 0;
+            padding: 0;
 
-                    .txt-search {
-                        width: 60%;
+            .nav-menu {
+                height: 100%;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .item {
+                    font-weight: bold;
+                    font-size: 0.8em;
+                    text-transform: uppercase;
+                    padding-left: 40px;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            color: colors.$hover;
+                        }
                     }
                 }
 
+                .active {
+                    a {
+                        color: colors.$secondary-header;
+                    }
+                }
             }
         }
-    }
 
-    .header-nav {
-        background-color: colors.$primary-variant-header;
-        border-bottom: solid 1px lightgray;
-        padding: 10px 0;
-
-        .row {
+        @include media-breakpoint-down(md) {
             .logo-container {
-                margin: 0;
-                padding: 0;
+                display: flex;
+                justify-content: center;
+
+                .nav-menu {
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 0;
+                    margin: 10px;
+
+                    .item {
+                        padding: 0;
+                    }
+                }
             }
 
             .nav-container {
-                margin: 0;
-                padding: 0;
-
-                .nav-menu {
-                    height: 100%;
-                    list-style: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-
-                    .item {
-                        font-weight: bold;
-                        font-size: 0.8em;
-                        text-transform: uppercase;
-                        padding-left: 40px;
-
-                        a {
-                            text-decoration: none;
-                            color: black;
-
-                            &:hover {
-                                color: colors.$hover;
-                            }
-                        }
-                    }
-
-                    .active {
-                        a {
-                            color: colors.$secondary-header;
-                        }
-                    }
-                }
-            }
-
-            .col-sm-12 {
                 display: flex;
                 justify-content: center;
 
