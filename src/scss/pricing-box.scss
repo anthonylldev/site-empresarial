@@ -1,12 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
 @import "header";
 @import "footer";
-
-@include media-breakpoint-down(sm) {}
-@include media-breakpoint-down(md) {}
-@include media-breakpoint-down(lg) {}
-@include media-breakpoint-down(xl) {}
-@include media-breakpoint-down(xxl) {}
+@import "colors";
+@import "functions";
 
 * {
     padding: 0;
@@ -16,6 +13,194 @@
 
 header {
     @extend %header-template
+}
+
+main {
+    .route-container {
+        background-color: $primary-main;
+        padding: 30px;
+
+        .container {
+            padding: 0;
+
+            .route {
+                @extend %route
+            }
+        }
+    }
+
+    .pricing-box-container {
+        background-color: white;
+        padding: 30px;
+
+        .container {
+            padding: 0;
+
+            .prices-1 {
+                .free-price {
+                    border: solid black 1px;
+                    padding: 0;
+
+                    .free-header {
+                        .type {
+                            background-color: $primary-main;
+                            padding: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            h1 {
+                                font-weight: bold;
+                            }
+                        }
+
+                        .price {
+                            background-color: #1a1e21;
+                            padding: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+
+                            h2 {
+                                font-size: 1.2em;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .access-list {
+                        @extend %access-list
+                    }
+
+                    .free-footer {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        button {
+                            background-color: $secondary-main;
+                            color: white;
+                            font-weight: bold;
+                            border: 0;
+                            padding: 10px;
+                            border-radius: 5px;
+                            width: 150px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .very-basic-price {
+                    border: solid black 1px;
+                    padding: 0;
+
+                    .very-basic-header {
+                        .type {
+                            background-color: $secondary-main;
+                            padding: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+
+                            h1 {
+                                font-weight: bold;
+                            }
+                        }
+
+                        .price {
+                            background-color: #1a1e21;
+                            padding: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+
+                            h2 {
+                                font-size: 1.2em;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .access-list {
+                        @extend %access-list
+                    }
+
+                    .very-basic-footer {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        button {
+                            background-color: $secondary-main;
+                            color: white;
+                            font-weight: bold;
+                            border: 0;
+                            padding: 10px;
+                            border-radius: 5px;
+                            width: 150px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .basic-price {
+                    border: solid black 1px;
+                    padding: 0;
+
+                    .basic-header {
+                        .type {
+                            background-color: $primary-main;
+                            padding: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            h1 {
+                                font-weight: bold;
+                            }
+                        }
+
+                        .price {
+                            background-color: #1a1e21;
+                            padding: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+
+                            h2 {
+                                font-size: 1.2em;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .access-list {
+                        @extend %access-list
+                    }
+
+                    .basic-footer {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        button {
+                            background-color: $secondary-main;
+                            color: white;
+                            font-weight: bold;
+                            border: 0;
+                            padding: 10px;
+                            border-radius: 5px;
+                            width: 150px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer {
