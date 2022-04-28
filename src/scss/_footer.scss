@@ -8,8 +8,30 @@
         padding: 50px 0;
 
         .row {
-            .col {
-                margin: 10px 10px;
+            .with-us {
+
+                h4 {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+
+                p {
+                    &:last-of-type {
+                        color: colors.$on-footer;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: colors.$on-footer;
+
+                    &:hover {
+                        color: colors.$hover;
+                    }
+                }
+            }
+
+            .information {
 
                 h4 {
                     font-size: 1.1em;
@@ -32,24 +54,35 @@
                 }
             }
 
-            .with-us {
-                p {
-                    &:last-of-type {
-                        color: colors.$on-footer;
-                    }
+            .pages {
+                h4 {
+                    font-size: 1.1em;
+                    font-weight: bold;
                 }
 
-                a {
-                    text-decoration: none;
-                    color: colors.$on-footer;
+                .footer-list {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
 
-                    &:hover {
-                        color: colors.$hover;
+                    a {
+                        text-decoration: none;
+                        color: colors.$on-footer;
+
+                        &:hover {
+                            color: colors.$hover;
+                        }
                     }
                 }
             }
 
             .newsletter {
+
+                h4 {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+
                 p {
                     color: colors.$on-footer;
                 }
@@ -79,6 +112,44 @@
                         font-size: 0.8em;
                         font-weight: bold;
                     }
+                }
+            }
+
+            .col-md-2 {
+                h4 {
+                    font-size: 1em;
+                }
+
+                .footer-list {
+                    a {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+
+            .col-md-3 {
+                h4 {
+                    font-size: 1em;
+                }
+
+                a {
+                    display: none;
+                }
+
+                p {
+                    &:first-of-type {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+
+            .col-md-5 {
+                h4 {
+                    font-size: 1em;
+                }
+
+                p {
+                    font-size: 0.9em;
                 }
             }
         }
