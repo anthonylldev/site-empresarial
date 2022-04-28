@@ -1,12 +1,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
 @import "header";
 @import "footer";
-
-@include media-breakpoint-down(sm) {}
-@include media-breakpoint-down(md) {}
-@include media-breakpoint-down(lg) {}
-@include media-breakpoint-down(xl) {}
-@include media-breakpoint-down(xxl) {}
+@import "colors";
 
 * {
     padding: 0;
@@ -16,6 +12,70 @@
 
 header {
     @extend %header-template
+}
+
+main {
+
+
+    .container-fluid {
+        background-color: $primary-main;
+        padding: 30px;
+        margin-bottom: 50px;
+
+        .container {
+            padding: 0;
+
+            .carousel {
+                .carousel-indicators {
+                    button {
+                        height: 10px;
+                        width: 10px;
+                        border-radius: 50%;
+                        background-color: $secondary-main;
+                    }
+                }
+
+                .carousel-item {
+                    height: 60vh;
+                }
+            }
+
+            .row {
+                margin-top: 50px;
+
+                .info-container {
+                    h2 {
+                        font-weight: bold;
+
+                        span {
+                            color: $secondary-main;
+                        }
+                    }
+                }
+
+                .button-container {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+                    button {
+                        border: 0;
+                        border-radius: 5px;
+                        background-color: $secondary-main;
+                        color: white;
+                        padding: 5px;
+                        transition: .3s ease-in;
+
+                        &:hover {
+                            box-shadow: 0 0 5px black,
+                            0 0 10px black,
+                            0 0 15px black;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer {
